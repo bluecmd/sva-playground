@@ -17,7 +17,7 @@ module testbench;
   );
 
   always #2 clk <= !clk;
-  always @(posedge clk) begin
+  initial begin
     #10
     reset <= 0;
   end
