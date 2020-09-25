@@ -16,3 +16,10 @@ see the successful path and thus the code.
 
 For reference there is also `make modelsim` and `make riviera` to do the same
 using randomized input.
+
+## Files
+
+The notable files are:
+
+ * [safe.sv](safe.sv) The Super Secure Safe (TM) IP code
+ * [tb.sv](tb.sv) The testbench driving the test
