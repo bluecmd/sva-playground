@@ -15,6 +15,7 @@ module safe (
     Aldec enum fsm_enc TRANS = PIN_3 -> PIN_3, PIN_3 -> LOCKOUT, PIN_3 -> UNLOCKED
     Aldec enum fsm_enc TRANS = LOCKOUT -> LOCKOUT, LOCKOUT -> PIN_0
   */
+  // NOTE: Yosys requires these to be explicitly numbered
   typedef enum {
     PIN_0 = 0,
     PIN_1 = 1,
