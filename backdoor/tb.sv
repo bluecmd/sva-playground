@@ -54,8 +54,6 @@ module testbench;
     end
   end
 
-  // For formal verification, this is all we need.
-  // This will tell the verifier to try to find a path to where unlocked == 1
   always @(posedge clk) begin
     // Assert that there are no other hidden codes than c0de
     // We want to be sure that the expensive IP we bought does not have any
