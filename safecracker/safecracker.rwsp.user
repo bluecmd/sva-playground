@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<riviera-workspace-user>
+    <plugins>
+        <plugin name="watch">
+            <settings>
+                <watch1/>
+                <watch2/>
+                <watch3/>
+                <watch4/>
+            </settings>
+        </plugin>
+        <plugin name="simulation_controller">
+            <settings>
+                <breakpoints/>
+            </settings>
+        </plugin>
+    </plugins>
+    <documents/>
+</riviera-workspace-user>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<riviera-design>
+    <version value="2020.04.130.7729"/>
+    <configurations>
+        <configuration name="optimized"/>
+        <configuration name="debug"/>
+    </configurations>
+    <properties>
+        <configuration name="debug">
+            <compilation>
+                <cpp>
+                    <generate-debug-information value="true"/>
+                </cpp>
+                <verilog>
+                    <coverage>
+                        <enable-fsm-self-loop-transitions value="true"/>
+                        <enable-fsm-sequence value="true"/>
+                    </coverage>
+                    <disable-assertion-processing>
+                        <type value="2"/>
+                    </disable-assertion-processing>
+                    <enable-access-design-structure value="true"/>
+                    <enable-access-individual-bits-vector-nets value="true"/>
+                    <enable-access-registers value="true"/>
+                    <enable-assertion-coverage value="true"/>
+                    <enable-branch-coverage value="true"/>
+                    <enable-condition-coverage value="true"/>
+                    <enable-delta-cycle-accuracy value="true"/>
+                    <enable-expression-coverage value="true"/>
+                    <enable-fsm-coverage value="true"/>
+                    <enable-statement-coverage value="true"/>
+                    <generate-debug-information value="true"/>
+                </verilog>
+                <vhdl>
+                    <generate-debug-information value="true"/>
+                </vhdl>
+            </compilation>
+            <global>
+                <intermediate-dir value="./debug"/>
+            </global>
+            <library>
+                <active-library value="safecracker"/>
+                <simulated-modules value="safecracker.testbench;"/>
+            </library>
+            <simulation>
+                <coverage-profiler>
+                    <acdb>
+                        <assertion-coverage>
+                            <collect-data value="true"/>
+                        </assertion-coverage>
+                        <branch-coverage>
+                            <collect-data value="true"/>
+                        </branch-coverage>
+                        <condition-coverage>
+                            <collect-data value="true"/>
+                        </condition-coverage>
+                        <expression-coverage>
+                            <collect-data value="true"/>
+                        </expression-coverage>
+                        <fsm-coverage>
+                            <collect-data value="true"/>
+                        </fsm-coverage>
+                        <functional-coverage>
+                            <collect-data value="true"/>
+                        </functional-coverage>
+                        <path-coverage>
+                            <collect-data value="true"/>
+                        </path-coverage>
+                        <statement-coverage>
+                            <collect-data value="true"/>
+                        </statement-coverage>
+                        <toggle-coverage>
+                            <collect-data value="true"/>
+                        </toggle-coverage>
+                    </acdb>
+                    <enable value="3"/>
+                </coverage-profiler>
+                <general>
+                    <access-data value="1|0|2|;"/>
+                    <enable-debug value="true"/>
+                </general>
+            </simulation>
+        </configuration>
+        <configuration name="optimized">
+            <compilation>
+                <cpp>
+                    <generate-debug-information value="false"/>
+                </cpp>
+                <verilog>
+                    <generate-debug-information value="false"/>
+                </verilog>
+                <vhdl>
+                    <generate-debug-information value="false"/>
+                </vhdl>
+            </compilation>
+            <global>
+                <intermediate-dir value="./optimized"/>
+            </global>
+        </configuration>
+    </properties>
+    <structure>
+        <file path="safe.sv"/>
+        <file path="tb.sv"/>
+        <file path="riviera.do"/>
+        <file path="safecracker.awc"/>
+    </structure>
+    <dependencies/>
+</riviera-design>

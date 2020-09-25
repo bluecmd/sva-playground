@@ -14,3 +14,6 @@ wave: yosys/engine_0/trace0.vcd
 
 modelsim:
 	vsim -c -do msim.do
+
+riviera:
+	vsimsa -c -do riviera.do

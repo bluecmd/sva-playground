@@ -1,6 +1,13 @@
 */modelsim/
-*/riviera/
 */yosys/
 */transcript
 */.linttmp
 .*.sw?
+
+# Riviera
+*/compile/
+*/library.cfg
+*/coverage.acdb
+*/dataset.asdb
+*/debug/
+

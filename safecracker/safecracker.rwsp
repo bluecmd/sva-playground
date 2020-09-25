@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE riviera-workspace>
+<riviera-workspace>
+    <version value="2020.04.130.7729"/>
+    <active-design name="safecracker"/>
+    <active-configuration name="debug"/>
+    <designs>
+        <design path="safecracker.rdsn"/>
+    </designs>
+    <dependencies/>
+    <configurations>
+        <configuration name="optimized">
+            <design name="safecracker" configuration="optimized"/>
+        </configuration>
+        <configuration name="debug">
+            <design name="safecracker" configuration="debug"/>
+        </configuration>
+    </configurations>
+</riviera-workspace>
