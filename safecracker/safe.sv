@@ -6,17 +6,6 @@ module safe (
     output wire unlocked
   );
 
- `ifdef YOSYS
-  // TODO: Yosys seems to not like SV state enums
-  localparam PIN_0 = 0,
-             PIN_1 = 1,
-             PIN_2 = 2,
-             PIN_3 = 3,
-             LOCKOUT = 4,
-             UNLOCKED = 5;
-
-  reg [2:0] state = PIN_0;
-`else
   /*
     Aldec enum fsm_enc CURRENT = state
     Aldec enum fsm_enc STATES = PIN_0, PIN_1, PIN_2, PIN_3, LOCKOUT, UNLOCKED
@@ -27,18 +16,21 @@ module safe (
     Aldec enum fsm_enc TRANS = LOCKOUT -> LOCKOUT, LOCKOUT -> PIN_0
   */
   typedef enum {
-    PIN_0,
-    PIN_1,
-    PIN_2,
-    PIN_3,
-    LOCKOUT,
-    UNLOCKED
+    PIN_0 = 0,
+    PIN_1 = 1,
+    PIN_2 = 2,
+    PIN_3 = 3,
+    LOCKOUT = 4,
+    UNLOCKED = 5
   } state_t;
 
-  state_t state = PIN_0;
-`endif
+  state_t state;
 
   assign unlocked = state == UNLOCKED;
+
+  initial begin
+    state <= PIN_0;
+  end
 
   always @(posedge clk) begin
     if (reset) begin

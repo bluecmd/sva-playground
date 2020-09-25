@@ -19,7 +19,7 @@ module testbench;
   always #2 clk <= !clk;
 
   logic [2:0] reset_cnt = 2;
-  logic       new_try = 0;
+  logic       new_try = 0;     // Unused in formal verification
   always @(posedge clk) begin
     if (reset_cnt != 0) begin
       reset_cnt <= reset_cnt - 1;
@@ -34,9 +34,7 @@ module testbench;
   // Allow yosys to select the password to try freely
   (* anyconst *) reg [15:0] password;
 
-  // TODO: yosys doesn't like int it seems?
-  // base: tb.sv:25: ERROR: syntax error, unexpected TOK_INT
-  logic [3:0] i = 0;
+  integer i = 0;
   always @(posedge clk) begin
     if (reset) begin
       i <= 0;
