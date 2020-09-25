@@ -11,4 +11,9 @@ be any truth to these allegations?
 If there is a backdoor the `make` command will fail and you can find the backdoor
 code using `make wave`.
 
+## Files
 
+The notable files are:
+
+ * [safe.sv](safe.sv) The Super Secure Safe (TM) IP code
+ * [tb.sv](tb.sv) The testbench driving the test
