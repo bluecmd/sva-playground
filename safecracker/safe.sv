@@ -19,8 +19,8 @@ module safe (
 `else
   /*
     Aldec enum fsm_enc CURRENT = state
-		Aldec enum fsm_enc STATES = PIN_0, PIN_1, PIN_2, PIN_3, LOCKOUT, UNLOCKED
-	  Aldec enum fsm_enc TRANS = PIN_0 -> PIN_0, PIN_0 -> LOCKOUT, PIN_0 -> PIN_1
+    Aldec enum fsm_enc STATES = PIN_0, PIN_1, PIN_2, PIN_3, LOCKOUT, UNLOCKED
+    Aldec enum fsm_enc TRANS = PIN_0 -> PIN_0, PIN_0 -> LOCKOUT, PIN_0 -> PIN_1
     Aldec enum fsm_enc TRANS = PIN_1 -> PIN_1, PIN_1 -> LOCKOUT, PIN_1 -> PIN_2
     Aldec enum fsm_enc TRANS = PIN_2 -> PIN_2, PIN_2 -> LOCKOUT, PIN_2 -> PIN_3
     Aldec enum fsm_enc TRANS = PIN_3 -> PIN_3, PIN_3 -> LOCKOUT, PIN_3 -> UNLOCKED
