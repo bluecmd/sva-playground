@@ -13,6 +13,7 @@ onbreak {
 }
 
 log -r /*
+add wave sim:/testbench/*
 
 run 10us
 
