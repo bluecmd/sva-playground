@@ -2,7 +2,7 @@
 module testbench;
 
   logic clk = 0;
-  logic reset = 1;
+  logic reset;
   logic unlocked;
 
   logic [7:0] din;
@@ -17,10 +17,15 @@ module testbench;
   );
 
   always #2 clk <= !clk;
-  initial begin
-    #10
-    reset <= 0;
+
+  logic [2:0] reset_cnt = 2;
+  always @(posedge clk) begin
+    if (reset_cnt != 0) begin
+      reset_cnt <= reset_cnt - 1;
+    end
   end
+
+  assign reset = reset_cnt != 0;
 
   (* anyconst *) reg [31:0] password;
 
