@@ -1,0 +1,42 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Fri Sep 25 08:46:23 2020
+[*]
+[dumpfile] "/home/bluecmd/sva-playground/safecracker/safecracker/engine_0/trace0.vcd"
+[dumpfile_mtime] "Fri Sep 25 08:44:49 2020"
+[dumpfile_size] 1024
+[savefile] "/home/bluecmd/sva-playground/safecracker/safecracker.gtkw"
+[timestart] 0
+[size] 848 1000
+[pos] 723 529
+*-5.336307 17 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[sst_width] 221
+[signals_width] 251
+[sst_expanded] 1
+[sst_vpaned_height] 101
+@420
+smt_step
+@28
+smt_clock
+@800200
+-uut
+@28
+testbench.uut.clk
+@22
+testbench.uut.din[7:0]
+@28
+testbench.uut.din_valid
+testbench.uut.reset
+@22
+testbench.uut.state[31:0]
+@28
+testbench.uut.unlocked
+@1000200
+-uut
+@22
+testbench.password[31:0]
+@29
+testbench.i[2:0]
+[pattern_trace] 1
+[pattern_trace] 0
