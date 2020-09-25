@@ -57,41 +57,9 @@ module testbench;
   // For formal verification, this is all we need.
   // This will tell the verifier to try to find a path to where unlocked == 1
   always @(posedge clk) begin
-    assert(!unlocked);
+    // Assert that there are no other hidden codes than c0de
+    // We want to be sure that the expensive IP we bought does not have any
+    // hidden backdoors
+    assert(!unlocked || password == 16'hc0de);
   end
-
-`ifndef FORMAL
-  // Describe the key constraints
-  class keyclass;
-    rand logic [3:0] key [4];
-    constraint cs {
-      key[0] inside {[0:15]};
-      key[1] inside {[0:15]};
-      key[2] inside {[0:15]};
-      key[3] inside {[0:15]};
-    }
-  endclass
-
-  keyclass key = new;
-
-  // If the last key has been sent and we are not unlocked, we need to reset the lock
-  always @(posedge clk) begin
-    new_try <= 0;
-    if (i == 4 && !unlocked) begin
-      new_try <= 1;
-    end
-  end
-
-  // Generate the key and finish the simulation if the correct one has been found
-  always @(posedge clk) begin
-    if (reset) begin
-      void'(key.randomize());
-      password <= {key.key[0], key.key[1], key.key[2], key.key[3]};
-    end
-    if (unlocked) begin
-      $display("Safe unlocked with code %h", password);
-      $finish;
-    end
-  end
-`endif
 endmodule

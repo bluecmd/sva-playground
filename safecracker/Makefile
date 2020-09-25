@@ -6,7 +6,7 @@ sby:
 lint:
 	vlog -work .linttmp -lint -sv safe.sv tb.sv
 
-wave: yosys/engine_0/trace0.vcd
+wave: yosys/engine_0/trace.vcd
 	gtkwave --save safecracker.gtkw --dump=$<
 	sed -i '/^\[dumpfile/d' safecracker.gtkw
 	sed -i '/^\[savefile/d' safecracker.gtkw

@@ -1,0 +1,28 @@
+[timestart] 0
+[size] 948 477
+[pos] 723 529
+*-5.336307 7 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] testbench.
+[sst_width] 221
+[signals_width] 251
+[sst_expanded] 1
+[sst_vpaned_height] 58
+@420
+smt_step
+@28
+smt_clock
+@800200
+-uut
+@28
+testbench.uut.clk
+testbench.uut.din_valid
+testbench.uut.reset
+testbench.uut.unlocked
+@23
+testbench.uut.state[31:0]
+@1000200
+-uut
+@22
+testbench.password[15:0]
+[pattern_trace] 1
+[pattern_trace] 0
