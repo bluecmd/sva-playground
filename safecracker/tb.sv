@@ -22,7 +22,7 @@ module testbench;
   logic       new_try = 0;     // Unused in formal verification
   always @(posedge clk) begin
     if (reset_cnt != 0) begin
-      reset_cnt <= reset_cnt - 1;
+      reset_cnt <= reset_cnt - 3'd1;
     end
     if (new_try) begin
       reset_cnt <= 2;
