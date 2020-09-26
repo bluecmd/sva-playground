@@ -57,7 +57,7 @@ module testbench;
   // For formal verification, this is all we need.
   // This will tell the verifier to try to find a path to where unlocked == 1
   always @(posedge clk) begin
-    assert(!unlocked);
+    cover(unlocked);
   end
 
 `ifndef FORMAL
