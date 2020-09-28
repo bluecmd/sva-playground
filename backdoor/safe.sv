@@ -21,15 +21,15 @@ module safe (
     Aldec enum fsm_enc TRANS = LOCKOUT -> LOCKOUT, LOCKOUT -> PIN_0
   */
   typedef enum {
-    PIN_0 = 0,
-    PIN_1 = 1,
-    PIN_2 = 2,
-    PIN_3 = 3,
-    SECRET_PIN_1 = 4,
-    SECRET_PIN_2 = 5,
-    SECRET_PIN_3 = 6,
-    LOCKOUT = 8,
-    UNLOCKED = 9
+    PIN_0,
+    PIN_1,
+    PIN_2,
+    PIN_3,
+    SECRET_PIN_1,
+    SECRET_PIN_2,
+    SECRET_PIN_3,
+    LOCKOUT,
+    UNLOCKED
   } state_t;
 
   state_t state;
